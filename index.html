@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cedric S. Raval | QA & AR Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow" id="glow"></div>
+
+<nav>
+  <b>cedric.raval</b>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><button class="tog" id="theme" aria-label="Toggle light or dark theme">Light mode</button></li>
+  </ul>
+</nav>
+
+<section class="hero" id="top">
+  <div>
+    <h1>Hi, I'm <span>Cedric Raval</span></h1>
+    <p class="role"><span id="typed"></span><i></i></p>
+    <p class="lead">Cum Laude IT graduate who tests real government software by day and builds augmented reality apps for fun. Based in Bulacan, Philippines.</p>
+    <div class="btns">
+      <a class="btn pri" href="#projects">See my projects</a>
+      <button class="btn sec" id="copyMail">Copy my email</button>
+    </div>
+    <div class="stats">
+      <div><b data-n="1">0</b><span>QA internship at Xurpas</span></div>
+      <div><b data-n="2">0</b><span>Full projects shipped</span></div>
+      <div><b>Cum Laude</b><span>BSIT, Class of 2026</span></div>
+    </div>
+  </div>
+
+  <div class="room" aria-label="Interactive room demo">
+    <svg viewBox="0 0 400 290" role="img" aria-label="A virtual room where you can place furniture and change wall color">
+      <polygon points="10,10 80,40 80,170 10,270" style="fill:var(--wall)" opacity=".7"/>
+      <polygon points="390,10 320,40 320,170 390,270" style="fill:var(--wall)" opacity=".7"/>
+      <polygon id="backwall" points="80,40 320,40 320,170 80,170" style="fill:var(--wall)"/>
+      <polygon points="80,170 320,170 390,270 10,270" style="fill:var(--bg2)"/>
+      <g id="grid" stroke="var(--line)" stroke-width="1"></g>
+      <!-- furniture -->
+      <g class="f" id="f-sofa"><rect x="115" y="118" width="120" height="26" rx="8" fill="#4d6bff"/><rect x="108" y="138" width="134" height="34" rx="9" fill="#6a84ff"/></g>
+      <g class="f" id="f-table"><rect x="255" y="148" width="56" height="10" rx="3" fill="#ffb44d"/><rect x="260" y="158" width="5" height="20" fill="#d9820b"/><rect x="301" y="158" width="5" height="20" fill="#d9820b"/></g>
+      <g class="f" id="f-lamp"><rect x="96" y="90" width="3" height="80" fill="#9aa4d6"/><polygon points="86,90 109,90 103,70 92,70" fill="#ffd27a"/></g>
+      <g class="f" id="f-plant"><rect x="320" y="150" width="22" height="22" rx="3" fill="#b5673a"/><circle cx="331" cy="140" r="16" fill="#2fe6b0"/><circle cx="322" cy="146" r="9" fill="#1fc796"/></g>
+      <g class="f" id="f-rug"><polygon points="130,205 250,205 275,245 105,245" fill="#ff6b8b" opacity=".8"/></g>
+      <rect class="scan" x="0" y="0" width="3" height="290" fill="#2fe6b0"/>
+    </svg>
+    <div class="bar" id="furn">
+      <button class="chip" data-f="sofa" aria-pressed="false">Sofa</button>
+      <button class="chip" data-f="table" aria-pressed="false">Table</button>
+      <button class="chip" data-f="lamp" aria-pressed="false">Lamp</button>
+      <button class="chip" data-f="plant" aria-pressed="false">Plant</button>
+      <button class="chip" data-f="rug" aria-pressed="false">Rug</button>
+    </div>
+    <div class="bar" id="paint" aria-label="Wall colors"></div>
+    <p class="cap" id="cap">Try it: this is my AR Room Scanner idea. Place furniture and repaint the wall.</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="about rv">
+    <div class="photo" id="photo"><img src="photo.jpg" alt="Cedric Raval" onerror="this.remove();document.getElementById('photo').textContent='CR'"></div>
+    <div>
+      <p>I like finding the small things that break software before real users do. During my internship I tested a web application built for the Department of Social Welfare and Development (DSWD), checked screens against Figma designs, and worked with developers to reproduce and confirm bug fixes.</p>
+      <p style="margin-top:1rem;color:var(--mute)">Outside testing, I build. My thesis-style AR app lets people scan a room and try furniture and paint before spending money. I'm a fast learner who enjoys teamwork and solving problems step by step.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job rv">
+    <header><h3>Quality Assurance Intern</h3><small>2026</small></header>
+    <small>Xurpas Enterprise Inc. — Makati City, Philippines</small>
+    <div class="acc" id="acc">
+      <div><button aria-expanded="true">Built test data for a DSWD web app</button><p class="open">Supported quality assurance for a web application built for the Department of Social Welfare and Development. I created and maintained structured test data sets for functional and regression testing, with extra care for data handling and edge cases.</p></div>
+      <div><button aria-expanded="false">Checked screens against Figma</button><p>Reviewed UI components against Figma design specs, verifying layout, navigation and interaction flows, and learned to turn design specs into working interfaces.</p></div>
+      <div><button aria-expanded="false">Worked with developers on bugs</button><p>Worked directly with developers to reproduce, diagnose and validate bug fixes, which gave me hands-on exposure to the development workflow and code-level troubleshooting.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-p="ar">AR Room Scanner</button>
+    <button class="tab" role="tab" aria-selected="false" data-p="book">Booking Platform</button>
+  </div>
+  <div class="panel on" id="p-ar">
+    <h3>AR Room Scanner and Interior Design App</h3>
+    <small style="color:var(--mute)">Solo developer, academic project</small>
+    <ul>
+      <li>Designed and built an end-to-end AR mobile app, from planning to deployment.</li>
+      <li>Room scanning with Unity AR Foundation and Google ARCore captures dimensions and surfaces in real time.</li>
+      <li>Furniture placement lets users position and scale virtual furniture inside the scanned room.</li>
+      <li>Wall and interior customization previews colors, textures and finishes before any real changes.</li>
+      <li>Modeled and optimized 3D furniture and prefabs in Blender for smooth use in Unity.</li>
+    </ul>
+    <div class="tags"><span>Unity</span><span>ARCore</span><span>AR Foundation</span><span>Blender</span><span>C#</span></div>
+  </div>
+  <div class="panel" id="p-book">
+    <h3>Online Booking and Scheduling Management Platform</h3>
+    <small style="color:var(--mute)">Academic project</small>
+    <ul>
+      <li>Web-based photoshoot booking system with automated scheduling and conflict resolution.</li>
+      <li>Responsive admin dashboard and customer portal with real-time availability checking.</li>
+      <li>Secure database design for customer data and appointment records.</li>
+    </ul>
+    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="runner rv">
+    <div class="top">
+      <button class="btn pri" id="run">Run all skill tests</button>
+      <div class="prog"><i id="bar"></i></div>
+      <span id="score">0 / 5 passed</span>
+    </div>
+    <div class="tests" id="tests"></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education and certificates</h2>
+  <div class="edu rv">
+    <div class="box">
+      <h3>BS in Information Technology</h3>
+      <p>Bulacan State University, Sarmiento Campus<br>2022 – 2026</p>
+      <p style="margin-top:.6rem">Dean's Lister, AY 2024</p>
+      <span class="laude">Graduated Cum Laude</span>
+    </div>
+    <div class="box">
+      <h3>TESDA</h3>
+      <p>Computer Systems Servicing NC II</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let's work together</h2>
+  <p>Open to QA, testing and junior developer roles.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn pri" href="mailto:cedc632@gmail.com">cedc632@gmail.com</a>
+    <a class="btn sec" href="tel:+639102906476">+63 910 290 6476</a>
+  </div>
+</section>
+
+<footer>© 2026 Cedric S. Raval · Bulacan, Philippines</footer>
+<div class="toast" id="toast" role="status">Email copied</div>
+
+<script src="script.js"></script>
+</body>
+</html>
